@@ -9,21 +9,28 @@
 
 @section('content')
     <!--====== Start Saas-banner section ======-->
-    <section class="saas-banner" style="background-image: url('{{asset('assets/front/img/banner.png')}}');">
+    {{-- style="background-image: url('{{asset('assets/front/img/banner.png')}}');" --}}
+
+    <section class="" style="background-color: rgba(255, 255, 255, 0.3); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);">
         <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
+            <div class="row align-items-center" style="background-image: url('{{asset('assets/front/img/img1.png')}}');">
+                <div class="col-lg-6" style="padding: 100px 60px 150px 60px;">
+
                     <div class="hero-content">
-                        {{-- <span class="span">
+                        {{-- <span style="color: #ffffff; font-size: 44px;" class="span">Easily create appealing</span>
+                        <span style="color: #BE0B83; font-size: 44px;" class="span">portfolios, vCards, and resumes!</span> --}}
+                        <h1 style="color: #ffffff;" class="banner-title">Easily create appealing </h1>
+                        <h1 style="color: #BE0B83;" class="banner-title">portfolios, vCards, and resumes!</h1>
+                        {{-- <span class="span text-dark">
                             {{$be->hero_section_title}}
                         </span> --}}
-                        {{-- <h1>{{$be->hero_section_text}}</h1> --}}
-                        <h1 class="banner-title">Easily create appealing portfolios, vCards, and resumes!</h1>
-                        <p class="banner-description">Ektasi Technology's EZ Profile is a flexible portfolio building tool. It offers customers a simple platform on which to build their own unique portfolio websites, vCards, and CVs.</p>
-                        <ul>
+                        <p style="color: #840BA6; font-size: 24px;">{{$be->hero_section_text}}</p>
+                        {{-- <h1 class="banner-title">Easily create appealing portfolios, vCards, and resumes!</h1>
+                        <p class="banner-description">Ektasi Technology's EZ Profile is a flexible portfolio building tool. It offers customers a simple platform on which to build their own unique portfolio websites, vCards, and CVs.</p> --}}
+                        <ul class="pt-50">
                             @if(!empty($be->hero_section_button_url))
                                 <li>
-                                    <a href="{{$be->hero_section_button_url}}" class="main-btn banner_button">{{$be->hero_section_button_text}}
+                                    <a href="{{$be->hero_section_button_url}}" class="main-btn banner_button" style="background-image: linear-gradient(to right, #840BA6 , #BE0B83);">{{$be->hero_section_button_text}}
                                         <i class="fal fa-long-arrow-alt-right"></i>
                                     </a>
                                 </li>
@@ -38,12 +45,14 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-img">
-                        <img data-src="{{asset('assets/front/img/'.$be->hero_img)}}" class="img-fluid lazy" alt="">
+                        {{-- <img data-src="{{asset('assets/front/img/'.$be->hero_img)}}" class="img-fluid lazy" alt=""> --}}
+                        <img data-src="{{asset('assets/front/img/img2.png')}}" class="img-fluid lazy" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section><!--====== End Saas-banner section ======-->
+
 
     @if ($bs->intro_section == 1)
     <!--====== Start saas-analysis section ======-->
@@ -58,7 +67,7 @@
                 <div class="col-lg-5">
                     <div class="choose-content-box mb-40">
                         <div class="section-title-one section-title-two mb-20">
-                            <span class="span">{{$bs->intro_title}}</span>
+                            <h1 class="span">{{$bs->intro_title}}</h1>
                             <h2>{{$bs->intro_subtitle}}</h2>
                         </div>
                         <p>{!! nl2br($bs->intro_text) !!} </p>
@@ -66,18 +75,20 @@
                 </div>
             </div>
         </div>
-    </section><!--====== End saas-analysis section ======-->
+    </section>
+    <!--====== End saas-analysis section ======-->
     @endif
+
 
     @if ($bs->feature_section == 1)
     <!--====== Start saas-features section ======-->
     <section class="saas-features pb-80">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="section-title-one section-title-two">
+                    <div class="section-title-one text-center mb-55" style="color: linear-gradient(90deg, #d70a84 0%, #51127f)">
                         @if (!empty($bs->feature_title))
-                        <span class="span">{{$bs->feature_title}}</span>
+                        <h1>{{$bs->feature_title}}</h1>
                         @endif
                     </div>
                 </div>
@@ -85,10 +96,10 @@
             <div class="row">
                 @foreach($features as $feature)
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="features-item features-box">
-                            <i class="{{$feature->icon}}"></i>
-                            <h4>{{$feature->title}}</h4>
-                            <p>{{ $feature->text }}</p>
+                        <div class="features-item features-box features">
+                            {{-- <i class="{{$feature->icon}}"></i> --}}
+                                <h4>{{$feature->title}}</h4>
+                                <p>{{ $feature->text }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -97,40 +108,38 @@
     </section><!--====== End saas-features section ======-->
     @endif
 
+
      <!--====== Start saas-features card section ======-->
-     <section class="saas-features-card">
+     <section class="saas-features-card"  style="background-image: url('{{asset('assets/front/img/img1.png')}}');">
         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title-one text-center mb-55">
-                        @if (!empty($bs->work_process_title))
-                        <span class="span">{{ 'All Features' }}</span>
-                        @endif
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="" class="img-fluid">
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title-one text-right mt-55 mb-120">
                         @if (!empty($bs->work_process_subtitle))
-                        <h2>{{ 'Unlock the Power of EZ Profile' }}</h2>
+                        <h1>{{ 'Unlock the Power of EZ Profile' }}</h1>
+                        @endif
+                        @if (!empty($bs->work_process_title))
+                        <h6 class="pt-10" style="color: #840BA6;"><<<&nbsp; &nbsp; All Features</h6>
                         @endif
                     </div>
                 </div>
             </div>
-            <div class="features-slider">
+            <div class="features-slider pb-60">
                 <div class="featurecard-slide">
                     <div class="ezprofile-feature-card">
-                        <span class="ezprofile-feature-card-icon">
-                            <i class="far fa-folders"></i>
-                        </span>
                         <div class="ezprofile-feature-card-content-wrapper">
-                            <h3 class="ezprofile-feature-card-title">Easy Portfolio Creation</h3>
+                            <h3 class="ezprofile-feature-card-title" style="color: #4E2082">Easy Portfolio Creation</h3>
                             <div class="ezprofile-feature-card-content">With its user-friendly layout and simple tools, EZ Profile makes the process of building professional portfolios, vCards, and CVs easier. Without technological knowledge, users may exhibit their abilities and accomplishments, saving time and effort.</div>
                         </div>
                     </div>
                 </div>
                 <div class="featurecard-slide">
                     <div class="ezprofile-feature-card">
-                        <span class="ezprofile-feature-card-icon">
-                            <i class="far fa-file"></i>
-                        </span>
                         <div class="ezprofile-feature-card-content-wrapper">
-                            <h3 class="ezprofile-feature-card-title">Customizable Templates</h3>
+                            <h3 class="ezprofile-feature-card-title" style="color: #4E2082">Customizable Templates</h3>
                             <div class="ezprofile-feature-card-content">Customers of the initiatives may develop distinctive and aesthetically pleasing profiles that are in line with their own brands or industry standards using a selection of customisable portfolio themes.
                             </div>
                         </div>
@@ -138,17 +147,14 @@
                 </div>
                 <div class="featurecard-slide">
                     <div class="ezprofile-feature-card">
-                        <span class="ezprofile-feature-card-icon">
-                            <i class="fas fa-qrcode"></i>
-                        </span>
                         <div class="ezprofile-feature-card-content-wrapper">
-                            <h3 class="ezprofile-feature-card-title">Advanced QR Code Builder</h3>
+                            <h3 class="ezprofile-feature-card-title" style="color: #4E2082">Advanced QR Code Builder</h3>
                             <div class="ezprofile-feature-card-content">Users can generate unique QR codes for their portfolio websites, vCards, or CVs using the sophisticated QR code creator offered by EZ Profile. This tool makes it simple to share contact details and links to online portfolios, making it easy for prospective clients or employers to access and browse their work. </div>
                         </div>
                     </div>
                 </div>
-                <!-- card 4 start -->
-                <div class="featurecard-slide">
+
+                {{-- <div class="featurecard-slide">
                     <div class="ezprofile-feature-card">
                         <span class="ezprofile-feature-card-icon">
                             <i class="fal fa-language"></i>
@@ -160,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- card 4 End -->
+
                 <div class="featurecard-slide">
                     <div class="ezprofile-feature-card">
                         <span class="ezprofile-feature-card-icon">
@@ -250,160 +256,33 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section><!--====== End saas-features card section ======-->
 
-    @if ($bs->process_section == 1)
-    <!--====== Start saas-project section ======-->
-    <section class="saas-project">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title-one text-center mb-55">
-                        @if (!empty($bs->work_process_title))
-                        <span class="span">{{$bs->work_process_title}}</span>
-                        @endif
-                        @if (!empty($bs->work_process_subtitle))
-                        <h2>{{$bs->work_process_subtitle}}</h2>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <div class="work-slide">
-                @foreach($processes as $key => $process)
-                    <div class="work-item">
-                        <div class="work-img">
-                            <img data-src="{{asset('assets/front/img/process/'.$process->image)}}" class="img-fluid lazy" alt="">
-                            <a href="#" class="count">{{$key < 9 ? "0".++$key : ++$key }}</a>
-                        </div>
-                        <div class="work-info">
-                            <h5>{{$process->title}}</h5>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section><!--====== End saas-project section ======-->
-    @endif
 
-    @if($bs->templates_section == 1 || count($templates) > 0)
-    <section class="saas-features pt-120">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-6">
-                    <div class="section-title-one mb-55">
-                        <span class="span">{{$bs->preview_templates_title}}</span>
-                        <h2>{{$bs->preview_templates_subtitle}}</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach ($templates as $template)
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="d-block features-item mb-40 p-0" href="{{detailsUrl($template)}}" target="_blank">
-                            <img src="{{asset('assets/front/img/template-previews/' . $template->template_img)}}" alt="" class="w-100 lazy">
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    @endif
 
-    @if ($bs->featured_users_section == 1) 
-    <!--====== Start saas-featured-users section ======-->
-    <section class="saas-featured-users pt-120 pb-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title-one section-title-two mb-50">
-                        @if (!empty($bs->featured_users_title))
-                        <span class="span">{{$bs->featured_users_title}}</span>
-                        @endif
-                        @if (!empty($bs->featured_users_subtitle))
-                        <h2>{{$bs->featured_users_subtitle}}</h2>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <div class="user-slide">
-                @foreach($featured_users as $featured_user)
-                    <div class="user-item">
-                        <div class="title">
-                            <img class="lazy" data-src="{{ isset($featured_user->photo) ? asset('assets/front/img/user/'.$featured_user->photo) : asset('assets/admin/img/propics/blank_user.jpg')}}" alt="user">
-                            <h5>{{$featured_user->first_name." ".$featured_user->last_name}}</h5>
-                            <span>{{$featured_user->username}}</span>
-                        </div>
-                        <div class="user-button">
-                            @php
-                                if (!empty($featured_user)) {
-                                    $currentPackage = App\Http\Helpers\UserPermissionHelper::userPackage($featured_user->id);
-                                    $preferences = App\Models\User\UserPermission::where([
-                                        ['user_id',$featured_user->id],
-                                        ['package_id',$currentPackage->package_id]
-                                    ])->first();
-                                    $permissions = isset($preferences) ? json_decode($preferences->permissions, true) : [];
-                                }
-                            @endphp  
-                            <ul>
-                                <li><a href="{{detailsUrl($featured_user)}}"
-                                       class="main-btn"><i class="fas fa-eye"></i>{{__('View Profile')}}</a></li>
-                                @guest       
-                                    @if (!empty($permissions) && in_array('Follow/Unfollow', $permissions))
-                                    <li>
-                                        <a href="{{route('user.follow',['id' => $featured_user->id])}}" class="main-btn"><i class="fal fa-user-plus"></i>{{__('Follow')}}
-                                        </a>
-                                    </li>
-                                    @endif
-                                @endguest
-                                @if(Auth::check() && Auth::id() != $featured_user->id)       
-                                    @if (!empty($permissions) && in_array('Follow/Unfollow', $permissions))
-                                    <li>
-                                        @if (App\Models\User\Follower::where('follower_id', Auth::id())->where('following_id', $featured_user->id)->count() > 0)
-                                            <a href="{{route('user.unfollow', $featured_user->id)}}" class="main-btn"><i class="fal fa-user-minus"></i>{{__('Unfollow')}}
-                                        </a>
-                                        @else
-                                           <a href="{{route('user.follow',['id' => $featured_user->id])}}" class="main-btn"><i class="fal fa-user-plus"></i>{{__('Follow')}}
-                                        @endif
-                                        </a>
-                                    </li>
-                                    @endif
-                                @endif
-                            </ul>
-                        </div>
-                        <div class="social-box">
-                            <ul class="social-link">
-                                @foreach($featured_user->social_media as $social)
-                                    <li><a href="{{$social->url}}" class="facebook" target="_blank"><i
-                                                class="{{$social->icon}}"></i></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section><!--====== End saas-featured-users section ======-->
-    @endif
 
     @if ($bs->pricing_section == 1)
     <!--====== Start saas-pricing section ======-->
     <section class="saas-pricing pt-60 pb-60" id="ezprofile-pricing-section">
         <div class="container-fluid">
-            <div class="row justify-content-center">
+            <div class="row pl-60">
                 <div class="col-lg-6 ezprofile-tab_wrapper">
-                    <div class="section-title-one text-center mb-50">
+                    <div class="section-title-one text-left mb-50">
                         @if (!empty($bs->pricing_title))
-                        <span class="span">{{$bs->pricing_title}}</span>
+                            <h3 class="span" style="font-weight: 700;">{{$bs->pricing_title}}</h3>
                         @endif
                         @if (!empty($bs->pricing_subtitle))
-                        <h2>{{$bs->pricing_subtitle}}</h2>
+                            <h1 class="pt-20" style="font-weight: 700;">{{$bs->pricing_subtitle}}</h1>
                         @endif
                     </div>
                 </div>
+                <div class="col-lg-6">
+                </div>
             </div>
+
 
             @if (count($terms) > 1)
             <div class="row justify-content-center">
@@ -470,11 +349,225 @@
                     </div>
                 </div>
                 @endforeach
-                
+
             </div>
         </div>
     </section><!--====== End saas-pricing section ======-->
     @endif
+
+
+
+    {{-- <h1 style="color: black;">Working here</h1> --}}
+
+    @if ($bs->news_section == 1)
+    <!--====== Start saas-blog section ======-->
+    <section class="saas-blog pb-80" style="background-image: url('{{asset('assets/front/img/img1.png')}}');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title-one text-center mb-50">
+                        @if (!empty($bs->blog_title))
+                        <h4 style="color: #4E2082" class="span">{{$bs->blog_title}}</h4>
+                        @endif
+                        @if (!empty($bs->blog_subtitle))
+                        <h1 class="pt-10">{{$bs->blog_subtitle}}</h1>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach($blogs as $blog)
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            {{-- <a class="post-img d-block" href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">
+                                <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy"
+                                     alt="blog-image">
+                            </a> --}}
+                        <div class="blog-item blog-card-main mb-40">
+                            <div class="entry-content"  style="border-radius: 30px;">
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li>
+                                            <span>
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <a href="#">{{\Carbon\Carbon::parse($blog->created_at)->format("F j, Y")}}</a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span><i class="fas fa-user"></i>
+                                            <a href="{{route('front.blogs', ['category'=>$blog->bcategory->id])}}">{{$blog->bcategory->name}}</a></span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <h3 class="title"><a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">{{$blog->title}}</a></h3>
+                                <div class="align-text-bottom">
+                                    <a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}" class="read-btn"><u>{{__('Continue Reading ')}}</u> >>>>></a>
+                                </div>
+                                {{-- <a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}" class="read-btn">{{__('Continue Reading ')}} <i class="fas fa-arrow-right"></i></a> --}}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-explore-wrap text-center mt-3">
+                        <a href="https://ezprofile.in/blogs" class="main-btn">Explore Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--====== End saas-blog section ======-->
+    @endif
+
+
+
+
+
+
+    {{-- Under this have no clue --}}
+
+
+
+
+    @if ($bs->process_section == 1)
+    <!--====== Start saas-project section ======-->
+    <section class="saas-project">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-left mb-55">
+                        @if (!empty($bs->work_process_title))
+                        <h3 class="">{{$bs->work_process_title}}</h3>
+                        @endif
+                        @if (!empty($bs->work_process_subtitle))
+                        <h2>{{$bs->work_process_subtitle}}</h2>
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-slide">
+                @foreach($processes as $key => $process)
+                    <div class="work-item">
+                        <div class="work-img">
+                            <img data-src="{{asset('assets/front/img/process/'.$process->image)}}" class="img-fluid lazy" alt="">
+                            <a href="#" class="count">{{$key < 9 ? "0".++$key : ++$key }}</a>
+                        </div>
+                        <div class="work-info">
+                            <h5>{{$process->title}}</h5>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section><!--====== End saas-project section ======-->
+    @endif
+
+    @if($bs->templates_section == 1 || count($templates) > 0)
+    <section class="saas-features pt-120">
+        <div class="container">
+
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-6">
+                    <div class="section-title-one mb-55">
+                        <span class="span">{{$bs->preview_templates_title}}</span>
+                        <h2>{{$bs->preview_templates_subtitle}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ($templates as $template)
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a class="d-block features-item mb-40 p-0" href="{{detailsUrl($template)}}" target="_blank">
+                            <img src="{{asset('assets/front/img/template-previews/' . $template->template_img)}}" alt="" class="w-100 lazy">
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    @endif
+
+    @if ($bs->featured_users_section == 1)
+    <!--====== Start saas-featured-users section ======-->
+    <section class="saas-featured-users pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title-one section-title-two mb-50">
+                        @if (!empty($bs->featured_users_title))
+                        <span class="span">{{$bs->featured_users_title}}</span>
+                        @endif
+                        @if (!empty($bs->featured_users_subtitle))
+                        <h2>{{$bs->featured_users_subtitle}}</h2>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="user-slide">
+                @foreach($featured_users as $featured_user)
+                    <div class="user-item">
+                        <div class="title">
+                            <img class="lazy" data-src="{{ isset($featured_user->photo) ? asset('assets/front/img/user/'.$featured_user->photo) : asset('assets/admin/img/propics/blank_user.jpg')}}" alt="user">
+                            <h5>{{$featured_user->first_name." ".$featured_user->last_name}}</h5>
+                            <span>{{$featured_user->username}}</span>
+                        </div>
+                        <div class="user-button">
+                            @php
+                                if (!empty($featured_user)) {
+                                    $currentPackage = App\Http\Helpers\UserPermissionHelper::userPackage($featured_user->id);
+                                    $preferences = App\Models\User\UserPermission::where([
+                                        ['user_id',$featured_user->id],
+                                        ['package_id',$currentPackage->package_id]
+                                    ])->first();
+                                    $permissions = isset($preferences) ? json_decode($preferences->permissions, true) : [];
+                                }
+                            @endphp
+                            <ul>
+                                <li><a href="{{detailsUrl($featured_user)}}"
+                                       class="main-btn"><i class="fas fa-eye"></i>{{__('View Profile')}}</a></li>
+                                @guest
+                                    @if (!empty($permissions) && in_array('Follow/Unfollow', $permissions))
+                                    <li>
+                                        <a href="{{route('user.follow',['id' => $featured_user->id])}}" class="main-btn"><i class="fal fa-user-plus"></i>{{__('Follow')}}
+                                        </a>
+                                    </li>
+                                    @endif
+                                @endguest
+                                @if(Auth::check() && Auth::id() != $featured_user->id)
+                                    @if (!empty($permissions) && in_array('Follow/Unfollow', $permissions))
+                                    <li>
+                                        @if (App\Models\User\Follower::where('follower_id', Auth::id())->where('following_id', $featured_user->id)->count() > 0)
+                                            <a href="{{route('user.unfollow', $featured_user->id)}}" class="main-btn"><i class="fal fa-user-minus"></i>{{__('Unfollow')}}
+                                        </a>
+                                        @else
+                                           <a href="{{route('user.follow',['id' => $featured_user->id])}}" class="main-btn"><i class="fal fa-user-plus"></i>{{__('Follow')}}
+                                        @endif
+                                        </a>
+                                    </li>
+                                    @endif
+                                @endif
+                            </ul>
+                        </div>
+                        <div class="social-box">
+                            <ul class="social-link">
+                                @foreach($featured_user->social_media as $social)
+                                    <li><a href="{{$social->url}}" class="facebook" target="_blank"><i
+                                                class="{{$social->icon}}"></i></a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section><!--====== End saas-featured-users section ======-->
+    @endif
+
+
+
 
     @if ($bs->testimonial_section == 1)
     <!--====== Start saas-testimonial section ======-->
@@ -512,62 +605,9 @@
     </section><!--====== End saas-testimonial section ======-->
     @endif
 
-    @if ($bs->news_section == 1)
-    <!--====== Start saas-blog section ======-->
-    <section class="saas-blog pb-80">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title-one text-center mb-50">
-                        @if (!empty($bs->blog_title))
-                        <span class="span">{{$bs->blog_title}}</span>
-                        @endif
-                        @if (!empty($bs->blog_subtitle))
-                        <h2>{{$bs->blog_subtitle}}</h2>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <?php //echo count($blogs); ?>
-                @foreach($blogs as $blog)
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                        <div class="blog-item blog-card-main mb-40">
-                            <a class="post-img d-block" href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">
-                                <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy"
-                                     alt="blog-image">
-                            </a>
-                            <div class="entry-content">
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li>
-                                            <span><i class="fas fa-user"></i>
-                                            <a href="{{route('front.blogs', ['category'=>$blog->bcategory->id])}}">{{$blog->bcategory->name}}</a></span></li>
-                                        <li>
-                                        <span>
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <a href="#">{{\Carbon\Carbon::parse($blog->created_at)->format("F j, Y")}}</a>
-                                        </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h3 class="title"><a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">{{$blog->title}}</a></h3>
-                                <a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}" class="read-btn">{{__('Continue Reading ')}} <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="blog-explore-wrap text-center mt-3">
-                        <a href="https://ezprofile.in/blogs" class="main-btn">Explore Blogs</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--====== End saas-blog section ======-->
-    @endif
+
+
+
 
     @if ($bs->partners_section == 1)
     <!--====== Start saas-sponsor section ======-->

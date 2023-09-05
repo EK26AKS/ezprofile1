@@ -15,12 +15,15 @@
 
 @section('content')
 
+    <style>
+
+    </style>
     <!--====== Start contacts-section ======-->
     <section class="contacts-section pt-120 pb-120">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="about__us-content">
+                    <div class="about__us-content text-dark" >
                     <p>
                     Welcome to EZ Profile, a revolutionary offering by Ektasi Technology that aims to simplify and enhance your digital presence. We understand the challenges individuals face in today's fast-paced digital world, and we are here to empower you with the tools and technologies needed to create a remarkable online identity.
                     </p>
@@ -53,7 +56,7 @@
                     Thank you for choosing EZ Profile by Ektasi Technology. We are excited to be a part of your journey towards a standout digital presence. Together, let's make your profile shine and elevate your online identity to new heights.
                     </p>
                     </div>
-                  
+
                 </div>
             </div>
         </div>

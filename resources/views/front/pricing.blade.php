@@ -17,9 +17,8 @@
 @section('content')
 
     <!--====== Start saas-pricing section ======-->
-    <section class="saas-pricing pricing-page pt-110 pb-120">
+    <section class="saas-pricing pricing-page pb-120">
         <div class="container-fluid">
- 
             @if (count($terms) > 1)
             <div class="row justify-content-center">
                 <div class="col-lg-4 ezprofile-tab_wrapper">
@@ -35,11 +34,11 @@
                 </div>
             </div>
             @endif
-
+            {{-- style="color: #4E2082; --}}
             <div class="pricing-wrapper tab-content">
                 @foreach ($terms as $term)
-                <div id="{{strtolower($term)}}" class="tab-pane {{$loop->first ? 'show active' : ''}} fade">
-                    <div class="row no-gutters ezprofile-pricing__wrap">
+                <div id="{{strtolower($term)}}" class="tab-pane {{$loop->first ? 'show active' : ''}} fade"  style="color: white;">
+                    <div class="row no-gutters ezprofile-pricing__wrap text-white">
                         @php
                             $packages = \App\Models\Package::where('status', '1')->where('term', strtolower($term))->get();
                         @endphp
@@ -48,7 +47,7 @@
                                 $pFeatures = json_decode($package->features);
                             @endphp
                             <div class="col-4">
-                                <div class="pricing-item">
+                                <div class="pricing-item text-white">
                                     @if($package->is_trial === "1" && $package->price != 0)
                                     <div class="listing-badges">
                                         <span class="featured">Introductory Offer</span>
@@ -85,7 +84,6 @@
                     </div>
                 </div>
                 @endforeach
-                
             </div>
 
         </div>

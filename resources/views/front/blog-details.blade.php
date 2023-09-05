@@ -28,7 +28,7 @@
 
     <!--====== BLOG DETAILS PART START ======-->
 
-    <section class="blog-details-area pt-120 pb-120">
+    <section class="blog-details-area pt-50 pb-120">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -39,7 +39,7 @@
                         <div class="blog-details-content">
                             <h3 class="title">{{$blog->title}}</h3>
                             <div class="summernote-content">
-                                <p>{!! replaceBaseUrl($blog->content) !!}</p>
+                                <p style="color: black;">{!! replaceBaseUrl($blog->content) !!}</p>
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@
                         </div> <!-- blog details comment -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="col-lg-4 col-md-7 col-sm-9" style="background-image: linear-gradient(to right, #840BA6 , #BE0B83);">
                     @includeIf('front.partials.blog-sidebar')
                 </div>
             </div>
@@ -82,7 +82,7 @@
     @section('scripts')
     <script>
         "use strict";
-        (function() { 
+        (function() {
             var d = document, s = d.createElement('script');
             s.src = 'https://{{$bs->disqus_shortname}}.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());

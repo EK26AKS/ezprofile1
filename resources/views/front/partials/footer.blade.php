@@ -6,17 +6,17 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 footer-logo-desc">
                     <div class="widget about-widget">
+                        <p style="color: white;">{{$bs->footer_text}}</p>
                         <a href="{{route('front.index')}}" class="d-inline-block"><img src="{{asset('assets/front/img/' . $bs->footer_logo)}}" class="img-fluid" alt=""></a>
-                        <p>{{$bs->footer_text}}</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6 ezp-footer-links">
                     <div class="widget useful-link-widget">
-                        <h4 class="widget-title">Important  Links</h4>
+                        <h4 class="widget-title text-white">Important  Links</h4>
                         @php
                             $ulinks = App\Models\Ulink::where('language_id',$currentLang->id)->orderby('id','desc')->get();
                         @endphp
-                        <ul class="widget-link">
+                        <ul class="widget-link text-white">
                             <li><a href="https://ezprofile.in/about-us" target="_blank">About Us</a></li>
                             <li><a href="https://ezstore.in/" target="_blank">EZ Store</a></li>
                             <li><a href="#" target="_blank">EZ Social</a><span class="badge badge-pill badge-primary ezprofile-badge">Upcoming</span></li>
@@ -25,9 +25,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 ezp-footer-links">
+                <div class="col-lg-2 col-md-6 col-sm-6 ezp-footer-links text-white">
                     <div class="widget useful-link-widget">
-                        <h4 class="widget-title">{{$bs->useful_links_title}}</h4>
+                        <h4 class="widget-title text-white">{{$bs->useful_links_title}}</h4>
                         @php
                             $ulinks = App\Models\Ulink::where('language_id',$currentLang->id)->orderby('id','desc')->get();
                         @endphp
@@ -38,10 +38,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-white">
                     <div class="widget newsletter-widget">
-                        <h4 class="widget-title">{{$bs->newsletter_title}}</h4>
-                        <p>{{$bs->newsletter_subtitle}}</p>
+                        <h4 class="widget-title text-white">{{$bs->newsletter_title}}</h4>
+                        <p class="text-white">{{$bs->newsletter_subtitle}}</p>
                         <form id="footerSubscriber" action="{{route('front.subscribe')}}" method="POST" class="subscribeForm">
                             @csrf
                             <div class="form_gorup">
@@ -62,16 +62,39 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-12">
+        <div class="copyright-wrap d-flex">
+            <div class="copyright-text text-center text-white">
+                @if($bs->copyright_section ==1)
+                    {{-- <p class="copyright summernote-content">{!! replaceBaseUrl($bs->copyright_text) !!}</p> --}}
+                @endif
+                © <?php echo date('Y'); ?> <a href="http://ektasi.io/" target="_blank">EKTASI Technology</a>. All rights reserved.
+            </div>
+            <div class="legal-links">
+                <p class="copyright-right text-white">
+                    <a href="https://ezprofile.in/privacy-policy" target="_blank">Privacy Policy</a>
+                    <span></span>
+                </p>
+                <p class="copyright-right text-white">
+                    <a href="https://ezprofile.in/tearms-and-conditions" target="_blank">Terms & Conditions</a>
+                    <span></span>
+                </p>
+                <p class="copyright-right text-white">
+                    <a href="https://ezprofile.in/refund-policy" target="_blank">Refund Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
     @endif
 
-    @if ($bs->copyright_section == 1)   
+    {{-- @if ($bs->copyright_section == 1)
     <div class="copyright-area">
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="copyright-wrap d-flex ">
                     <div class="copyright-text text-center">
                         @if($bs->copyright_section ==1)
-                            {{-- <p class="copyright summernote-content">{!! replaceBaseUrl($bs->copyright_text) !!}</p> --}}
+
                         @endif
                         © <?php echo date('Y'); ?> <a href="http://ektasi.io/" target="_blank">EKTASI Technology</a>. All rights reserved.
                     </div>
@@ -88,9 +111,9 @@
                             <a href="https://ezprofile.in/refund-policy" target="_blank">Refund Policy</a>
                         </p>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
-    @endif
+    @endif --}}
 </footer><!--====== End Footer ======-->

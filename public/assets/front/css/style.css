@@ -1,11 +1,15 @@
 /*===========================
-    1. COMMON css 
+    1. COMMON css
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 html {
     font-size: 100%;
     scroll-behavior: smooth;
+}
+html,
+body {
+    overflow-x: hidden !important;
 }
 
 * {
@@ -55,7 +59,7 @@ h4,
 h5,
 h6 {
     font-family: "Poppins", sans-serif;
-    color: #222F5A;
+    color: #D70A84;
     margin: 0px;
 }
 
@@ -95,15 +99,15 @@ ol {
 }
 
 p {
-    color: #565872;
+    color: #000;
     margin: 0px;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
-    color: #565872;
+    color: #ffffff;
     font-size: 16px;
     line-height: 30px;
     overflow-x: hidden;
@@ -185,7 +189,7 @@ body {
     /* background: rgba(21, 116, 246, 0.05); */
     text-transform: capitalize;
     border-radius: 30px;
-    border-radius: 3px;
+    border-radius: 10px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -383,7 +387,7 @@ Start scroll_up css
 .back-to-top {
     background: #1574F6;
     border-radius: 50%;
-    bottom: 70px;
+    bottom: 26px;
     color: #fff;
     cursor: pointer;
     display: none;
@@ -409,7 +413,7 @@ Start scroll_up css
     End scroll_up css
 */
 /*===========================
-    2. HEADER css 
+    2. HEADER css
 ===========================*/
 .transparent-header {
     position: absolute;
@@ -900,11 +904,11 @@ Start scroll_up css
 }
 
 /*===========================
-    3. Hero css 
+    3. Hero css
 ===========================*/
 .saas-banner {
     position: relative;
-    background: #FFFFFF;
+    background: #ff8b8b;
     padding: 100px 60px 150px 60px;
     background-position: left;
     background-repeat: no-repeat;
@@ -1059,7 +1063,8 @@ Start scroll_up css
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, hsla(324, 91%, 44%, 1) 0%, hsla(275, 75%, 28%, 1) 100%) !important;
+    background: white;
+    /* background: linear-gradient(90deg, hsla(324, 91%, 44%, 1) 0%, hsla(275, 75%, 28%, 1) 100%) !important; */
 }
 
 .breadcrumbs-section .breadcrumbs-content {
@@ -1085,16 +1090,16 @@ Start scroll_up css
 }
 
 .breadcrumbs-section .breadcrumbs-content ul.breadcrumbs-link li.active {
-    color: #fff;
+    color: #D70A84;
 }
 
 .breadcrumbs-section .breadcrumbs-content ul.breadcrumbs-link li a {
-    color: #ffffff !important;
+    color: #D70A84 !important;
 }
 
 .breadcrumbs-section .breadcrumbs-content ul.breadcrumbs-link li:after {
     display: inline-block;
-    color: #fff;
+    color: #D70A84;
     content: '|';
     font-size: 14px;
     margin-left: 10px;
@@ -1102,7 +1107,7 @@ Start scroll_up css
 }
 
 /*===========================
-    4. Features css 
+    4. Features css
 ===========================*/
 /* saas-analysis section */
 .saas-analysis .choose-content-box .section-title-one span.span:before {
@@ -1145,11 +1150,17 @@ Start scroll_up css
 }
 
 .saas-features .features-box {
-    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #D70A84, #51127F) border-box;
-    border-radius: 10px;
-    border: 4px solid transparent;
+    /* background: linear-gradient(white, rgb(255, 255, 255)) padding-box, linear-gradient(to right, #D70A84, #51127F) border-box; */
+    background: white;
+    border-radius: 20px;
+    border: 4px solid #D70A84;
     height: 100%;
-    text-align: justify;
+    text-align: center;
+}
+
+
+.saas-features .features:hover {
+    background-color: #f3c6ff;
 }
 
 .saas-features .features-item:hover i {
@@ -1434,7 +1445,7 @@ Start scroll_up css
 }
 
 .saas-pricing .pricing-item .title h2.price {
-    color: #000000 !important;
+    color: #51127f !important;
 }
 
 .saas-pricing .pricing-tabs .nav-tabs .nav-link {
@@ -1458,7 +1469,8 @@ Start scroll_up css
 
 .saas-pricing .pricing-item {
     position: relative;
-    background: #fff;
+    background: #c4446794;
+
     /* margin-bottom: 40px; */
     margin: 10px;
 }
@@ -1466,6 +1478,7 @@ Start scroll_up css
 .pricing-item {
     border: 2px solid #d70a84;
     border-radius: 5px;
+
 }
 
 .saas-pricing .pricing-item.active-item {
@@ -1482,7 +1495,7 @@ Start scroll_up css
     font-weight: 400;
     margin-bottom: 30px;
     color: #d60a84;
-    background-color: #f7cee678;
+    /* background-color: #f7cee678; */
     display: inline-block;
     padding: 5px 30px;
     border-radius: 5px;
@@ -1620,10 +1633,11 @@ Start scroll_up css
 }
 
 .faqs-section .faq-wrapper .card .card-header {
-    border-radius: 0px;
-    background: #f7cee6;
-    color: #222F5A;
-    font-weight: 500;
+    border-radius: 15px;
+    /* background: #f7cee6; */
+    background-image: linear-gradient(180deg, #840BA6, #BE0B83);
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .faqs-section .faq-wrapper .card .card-header .toggle_btn {
@@ -1926,11 +1940,15 @@ ul.pagination li {
 }
 
 /*===========================
-    5. Blog css 
+    5. Blog css
 ===========================*/
 
 .saas-blog .blog-item .entry-content {
     padding: 25px;
+    background:  rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    /* border-radius: 30px; */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2057,7 +2075,7 @@ ul.pagination li {
 }
 
 .blog-box .blog-title {
-    background: #f1f1f1;
+    /* background: #f1f1f1; */
     padding: 10px 0 10px 30px;
 }
 
@@ -2095,8 +2113,9 @@ ul.pagination li {
     display: flex;
     flex-wrap: wrap;
     border-radius: 5px;
-    border: 1px solid #E2EEFF;
+    /* border: 1px solid #E2EEFF; */
     height: 95%;
+    /* border-radius: 30px; */
 }
 
 .blog-thumb img {
@@ -2124,7 +2143,7 @@ ul.pagination li {
 }
 
 /*===========================
-    6. Features css 
+    6. Features css
 ===========================*/
 .contacts-section .contact-information h2 {
     margin-bottom: 10px;
@@ -2145,12 +2164,12 @@ ul.pagination li {
     width: 100%;
     line-height: 1em;
     position: relative;
-    padding-left: 25px;
+    padding-left: 45px;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 30px;
     top: 4px;
-    color: #000000 !important;
+    color: #d70a84 !important;
 }
 
 .contacts-section .contact-information .info-box ul.info-box-list li .contact-info-title i {
@@ -2160,15 +2179,16 @@ ul.pagination li {
 }
 
 .contacts-section .contact-information .info-box ul.info-box-list li p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
     margin-bottom: 0px;
     color: #000000 !important;
+    padding-left: 50px;
 }
 
 .contacts-section .contact-form {
     padding: 30px;
-    box-shadow: 0 0 12px rgba(33, 33, 33, 0.2) !important;
+    /* box-shadow: 0 0 12px rgba(33, 33, 33, 0.2) !important; */
     border-radius: 15px;
 }
 
@@ -2181,15 +2201,17 @@ ul.pagination li {
 }
 
 .contacts-section .contact-form form .form_group .form_control {
-    padding: 0;
+    padding: 20;
     border: none;
     height: 50px;
-    border-bottom: 1px solid #e1e1e1;
+    /* border-bottom: 1px solid #e1e1e1;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; */
+    border: 3px solid #BE0B83;
+    border-radius: 15px;
 }
 
 .contacts-section .contact-form form .form_group .form_control:focus {
@@ -2206,7 +2228,7 @@ ul.pagination li {
 }
 
 /*===========================
-    7. Footer css 
+    7. Footer css
 ===========================*/
 .saas-footer .footer-widget {
     background: #F8F9FE;
@@ -2236,7 +2258,7 @@ ul.pagination li {
 .saas-footer .footer-widget .widget.about-widget img {
     margin-bottom: 5px;
     width: auto;
-    height: 40px;
+    height: 55px;
 }
 
 .saas-footer .footer-widget .widget.about-widget p {
@@ -2365,6 +2387,9 @@ ul.pagination li {
 
 .saas-footer .footer-widget {
     background-color: #f7cee6;
+    background-image: linear-gradient(180deg, #BE0B83, #E68E9C);
+    padding-top: 10px;
+
 }
 
 .copyright-area .container-fluid .col-lg-12{
@@ -2374,13 +2399,14 @@ ul.pagination li {
 .ektasi-footer {
     background-color: #f7cee6;
     padding: 60px 0px 0px 0px;
+    background-image: linear-gradient(180deg, #BE0B83, #E68E9C);
 }
 
 .copyright-wrap {
     display: flex !important;
     justify-content: space-between;
-    color: #000000 !important;
-    border-top: 2px solid #000000;
+    color: #ffffff !important;
+    border-top: 2px solid #ffffff;
     padding-top: 15px;
 }
 
@@ -2417,9 +2443,9 @@ ul.pagination li {
 contact us css
 ===========================*/
 .contacts-section .contact-information {
-    background: #f7cee6;
+    /* background: #f7cee6; */
     padding: 40px 30px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     margin-top: 25%;
 }
 
@@ -3289,10 +3315,15 @@ ul#anetErrors {
 
 /* feature section added */
 .ezprofile-feature-card {
-    background: #fff;
+    /* background: #fff; */
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
     box-shadow: 5px 9px 30px 0px #464a5b14;
     padding: 50px 30px;
-    border-radius: 10px;
+    border-radius: 20px;
+    border: 2px solid linear-gradient(90deg, #e4e4e4 0%, #fff4f4 100%);
     text-align: center;
     position: relative;
     z-index: 0;
@@ -3301,15 +3332,15 @@ ul#anetErrors {
     height: 100%;
 }
 
-.ezprofile-feature-card:hover {
+/* .ezprofile-feature-card:hover {
     background: linear-gradient(90deg, #d70a84 0%, #51127f 100%) !important;
-}
+} */
 
 .ezprofile-feature-card:hover .ezprofile-feature-card-icon {
     /* display: none; */
 }
 
-.ezprofile-feature-card:hover .ezprofile-feature-card-icon,
+/* .ezprofile-feature-card:hover .ezprofile-feature-card-icon,
 .ezprofile-feature-card:hover .ezprofile-feature-card-title,
 .ezprofile-feature-card:hover .ezprofile-feature-card-content {
     color: #fff;
@@ -3361,7 +3392,14 @@ ul#anetErrors {
 
 .ezprofile-feature-card-icon svg {
     height: 45px;
-}
+} */
+
+/* ezprofile-feature end */
+
+
+
+
+
 
 .facebook_login_button i,
 .google_login_button i {
@@ -3375,7 +3413,7 @@ ul#anetErrors {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    padding: 10px 20px 5px 20px !important; 
+    padding: 10px 20px 5px 20px !important;
 }
 
 .facebook_login_button {
@@ -3385,7 +3423,7 @@ ul#anetErrors {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    padding: 10px 20px 5px 20px !important; 
+    padding: 10px 20px 5px 20px !important;
 }
 
 .login-page .social-login-btn {
@@ -3569,6 +3607,7 @@ ul#anetErrors {
 }
 .blog-card-main{
     box-shadow: 0 3px 40px 0 rgb(0 0 0 / 10%);
+    border-radius: 30px;
 }
 .saas-blog .blog-item .entry-content a.read-btn{
     margin-bottom: 0px;
@@ -3576,7 +3615,7 @@ ul#anetErrors {
     font-weight: 500;
 }
 .breadcrumbs-section .breadcrumbs-content h1 {
-    color: #fff;
+    color: black;
     margin-bottom: 15px;
     font-size: 35px;
     line-height: normal;
@@ -3601,9 +3640,9 @@ ul#anetErrors {
     background: #0A66C2;
 }
 .saas-pricing .pricing-item .title h3 {
-    font-weight: 500;
-    color: #d60a84;
-    font-size: 18px !important;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px !important;
 }
 
 .privacy__policy-table tr th{

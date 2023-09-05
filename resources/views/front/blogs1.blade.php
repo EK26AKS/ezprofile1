@@ -16,23 +16,21 @@
 
 @section('content')
 
-    <section class=" blog-page" style="background-image: url('{{asset('assets/front/img/img1.png')}}');">
+    <section class="saas-blog blog-page">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4" style="background-image: linear-gradient(to right, #840BA6 , #BE0B83);">
-                    @includeIf('front.partials.blog-sidebar')
-                </div>
-                <div class="col-lg-8 pb-60">
-                backdrop-filter: blur(3px);">
-                    @foreach($blogs as $blog)
-                        <div class="row mb-3" style="background-color: rgba(100, 100, 100, 0.404); -webkit-backdrop-filter: blur(2px); margin: 10px; border: 4px solid white; border-radius: 20px;">
-                            <div class="col-lg-8">
+                <div class="col-lg-8">
+                    <div class="row">
+                        @foreach($blogs as $blog)
+                            <div class="col-lg-7" style="background-color: rgba(255, 255, 255, 0.4);
+                            -webkit-backdrop-filter: blur(15px);
+                            backdrop-filter: blur(15px);">
                                 <div class="blog-item @if(!$loop->last) mb-40 @endif">
                                     <div class="entry-content">
-                                        <div class="entry-meta pt-4">
+                                        <div class="entry-meta">
                                             <ul>
                                                 <li><span><i class="fas fa-user"></i><a
-                                                    href="{{route('front.blogs', ['category'=>$blog->bcategory->id])}}">{{$blog->bcategory->name}}</a></span></li>
+                                                            href="{{route('front.blogs', ['category'=>$blog->bcategory->id])}}">{{$blog->bcategory->name}}</a></span></li>
                                                 <li>
                                                 <span>
                                                     <i class="fas fa-calendar-alt"></i>
@@ -42,25 +40,26 @@
                                             </ul>
                                         </div>
                                         <h3 class="title"><a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">{{$blog->title}}</a></h3>
-                                        <a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}" class="read-btn text-dark">{{__('Read More')}}</a>
+                                        <a href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}" class="read-btn">{{__('Read More')}}</a>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex justify-content-center" style="background: white; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
-                                <a class="" href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">
-
+                            <div class="col-lg-5" style="margin-left: -15px;">
+                                <a class="post-img d-block" href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">
+                                    <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy"
+                                        alt="">
                                 </a>
-                                <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy p-2" alt="">
                             </div>
-                        </div>
-                    @endforeach
-
+                        @endforeach
+                    </div>
                     <div>
                         {{$blogs->appends(['category' => request()->input('category')])->links()}}
                     </div>
                 </div>
-
+                <div class="col-lg-4" style="background-image: linear-gradient(to right, #840BA6 , #BE0B83);">
+                    @includeIf('front.partials.blog-sidebar')
+                </div>
             </div>
         </div>
     </section>

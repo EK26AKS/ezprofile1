@@ -1,9 +1,9 @@
-<div class="blog-sidebar">
+<div class="blog-sidebar" style="border-radius: 5px;">
     <div class="blog-box blog-border">
         <div class="blog-title pl-45">
-            <h4 class="title"><i class="fa fa-list {{$rtl == 1 ? 'mr-20 ml-10' : 'mr-10'}}"></i>{{__('All Categories')}}</h4>
+            <h4 class="title text-white"><i class="fa fa-list {{$rtl == 1 ? 'mr-20 ml-10' : 'mr-10'}}"></i>{{__('All Categories')}}</h4>
         </div>
-        <div class="blog-cat-list pl-45 pr-45">
+        <div class="blog-cat-list pl-45 pr-45 text-white">
             <ul>
                 <li class="single-category @if(empty(request()->input('category'))) active @endif"><a href="{{route('front.blogs')}}">{{__('All')}}</a></li>
                 @foreach ($bcats as $key => $bcat)
