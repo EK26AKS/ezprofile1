@@ -381,13 +381,19 @@ button {
     }
 }
 
+
+.my-gradient{
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
 /*
 Start scroll_up css
 */
 .back-to-top {
     background: #1574F6;
     border-radius: 50%;
-    bottom: 26px;
+    bottom: 45px;
     color: #fff;
     cursor: pointer;
     display: none;
@@ -1406,6 +1412,7 @@ Start scroll_up css
 /* saas-pricing section */
 .saas-pricing {
     position: relative;
+
 }
 
 .saas-pricing:before {
@@ -1419,11 +1426,11 @@ Start scroll_up css
 }
 
 .pricing-page.saas-pricing:before {
-    background: #FFFFFF;
+    background: transparent;
 }
 
 .saas-pricing.pricing-page .pricing-item {
-    border: 2px solid #d70a84;
+    /* border: 2px solid #d70a84; */
 }
 
 .saas-pricing .pricing-tabs {
@@ -1476,8 +1483,8 @@ Start scroll_up css
 }
 
 .pricing-item {
-    border: 2px solid #d70a84;
-    border-radius: 5px;
+    /* border: 2px solid #d70a84; */
+    border-radius: 15px;
 
 }
 
@@ -1611,6 +1618,10 @@ Start scroll_up css
 
 /* saas-section section */
 
+.faqs-section{
+    background-image: url("assets/front/img/pricing01.png");
+    background-repeat: no-repeat;
+}
 .faqs-section .faq-wrapper .faq-title h2 {
     margin-bottom: 20px;
 }
@@ -1627,7 +1638,7 @@ Start scroll_up css
 }
 
 .faqs-section .faq-wrapper .card {
-    border-radius: 0px;
+    border-radius: 15px;
     border: none;
     margin-bottom: 20px;
 }
@@ -1654,7 +1665,10 @@ Start scroll_up css
 }
 
 .faqs-section .faq-wrapper .card .card-body {
-    background: #f7cee6;
+    /* background: #f7cee6; */
+    border-radius: 15px;
+    background-image: linear-gradient(180deg, #840BA6, #BE0B83);
+    color: white;
 }
 
 .faqs-section .faq-wrapper .card.card .card-header[aria-expanded="true"] .toggle_btn::after {
@@ -1663,9 +1677,10 @@ Start scroll_up css
 }
 
 .faqs-section .faq-wrapper .card.card .card-header[aria-expanded="true"] {
-    background: #f7cee6;
+    /* background: #f7cee6; */
+    background-image: linear-gradient(180deg, #840BA6, #BE0B83);
     border-color: transparent;
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
 .faqs-section .faq-sidebar .widget.contact-widget form h4 {
@@ -1698,7 +1713,9 @@ Start scroll_up css
 }
 
 .ezprofile-accordion .card .card-body p {
-    color: #000000 !important;
+    color: #ffffff !important;
+    font-size: 15px;
+
 }
 
 /* user-form-section section */
@@ -2256,7 +2273,7 @@ ul.pagination li {
 }
 
 .saas-footer .footer-widget .widget.about-widget img {
-    margin-bottom: 5px;
+    margin-bottom: 40px;
     width: auto;
     height: 55px;
 }
@@ -2444,9 +2461,9 @@ contact us css
 ===========================*/
 .contacts-section .contact-information {
     /* background: #f7cee6; */
-    padding: 40px 30px;
+    padding: 20px 20px;
     /* border-radius: 15px; */
-    margin-top: 25%;
+    margin-top: 5%;
 }
 
 /*---------------------------

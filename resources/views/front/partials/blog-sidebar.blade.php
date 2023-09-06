@@ -1,4 +1,4 @@
-<div class="blog-sidebar" style="border-radius: 5px;">
+<div class="blog-sidebar" style="border-radius: 7px;">
     <div class="blog-box blog-border">
         <div class="blog-title pl-45">
             <h4 class="title text-white"><i class="fa fa-list {{$rtl == 1 ? 'mr-20 ml-10' : 'mr-10'}}"></i>{{__('All Categories')}}</h4>

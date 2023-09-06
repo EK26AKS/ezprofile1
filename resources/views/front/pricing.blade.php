@@ -16,9 +16,20 @@
 
 @section('content')
 
+    <style>
+        #multibackground {
+            background-image: url(assets/front/img/pricing2.png), url(assets/front/img/pricing2.png);
+            background-position: left top, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 75px;
+        }
+    </style>
     <!--====== Start saas-pricing section ======-->
-    <section class="saas-pricing pricing-page pb-120">
-        <div class="container-fluid">
+    {{-- <div id="multibackground">
+
+    </div> --}}
+    <section class="saas-pricing pricing-page pb-120" >
+        <div class="container-fluid" >
             @if (count($terms) > 1)
             <div class="row justify-content-center">
                 <div class="col-lg-4 ezprofile-tab_wrapper">
@@ -35,9 +46,10 @@
             </div>
             @endif
             {{-- style="color: #4E2082; --}}
-            <div class="pricing-wrapper tab-content">
+            {{-- style="background-image: url('{{asset('assets/front/img/pricing.png')}}');" --}}
+            <div class="pricing-wrapper tab-content" >
                 @foreach ($terms as $term)
-                <div id="{{strtolower($term)}}" class="tab-pane {{$loop->first ? 'show active' : ''}} fade"  style="color: white;">
+                <div id="{{strtolower($term)}}" class="tab-pane {{$loop->first ? 'show active' : ''}} fade text-white">
                     <div class="row no-gutters ezprofile-pricing__wrap text-white">
                         @php
                             $packages = \App\Models\Package::where('status', '1')->where('term', strtolower($term))->get();

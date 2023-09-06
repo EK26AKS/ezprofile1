@@ -21,9 +21,9 @@
     <!--====== Start contacts-section ======-->
     <section class="contacts-section pt-120 pb-120">
         <div class="container">
-            <div class="row">
+            <div class="row" style="background-color: rgba(255, 255, 255, 0.3); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px);">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="about__us-content text-dark" >
+                    <div class="about__us-content text-dark">
                     <p>
                     Welcome to EZ Profile, a revolutionary offering by Ektasi Technology that aims to simplify and enhance your digital presence. We understand the challenges individuals face in today's fast-paced digital world, and we are here to empower you with the tools and technologies needed to create a remarkable online identity.
                     </p>

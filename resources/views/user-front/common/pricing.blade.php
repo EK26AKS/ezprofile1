@@ -28,8 +28,6 @@
     <!--====== PRICING PART START ======-->
 
     <section class="pricing-area pt-120 pb-120">
-
-
         <div class="container">
             @if (Session::has('warning'))
                 <div class="col-lg-12 alert alert-warning">
@@ -65,7 +63,7 @@
                     // }
                     // $tnntadslimit = App\Http\Helpers\LimitCheckerHelper::adsLimit($user->id);
                     // $availableAds = $tnntadslimit - $sum;
-                    
+
                     //checking
                     $count = App\Http\Helpers\LimitCheckerHelper::currentAdsCount($user->id); //count of current package
                     $tenantAdsLimit = App\Http\Helpers\LimitCheckerHelper::adsLimit($user->id);

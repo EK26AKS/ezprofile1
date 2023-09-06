@@ -16,14 +16,14 @@
 
 @section('content')
 
-    <section class=" blog-page" style="background-image: url('{{asset('assets/front/img/img1.png')}}');">
+    <section class=" blog-page" style="background: url('{{asset('assets/front/img/pricing.png')}}'); background-repeat: no-repeat; background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4" style="background-image: linear-gradient(to right, #840BA6 , #BE0B83);">
                     @includeIf('front.partials.blog-sidebar')
                 </div>
                 <div class="col-lg-8 pb-60">
-                backdrop-filter: blur(3px);">
+
                     @foreach($blogs as $blog)
                         <div class="row mb-3" style="background-color: rgba(100, 100, 100, 0.404); -webkit-backdrop-filter: blur(2px); margin: 10px; border: 4px solid white; border-radius: 20px;">
                             <div class="col-lg-8">
@@ -51,7 +51,7 @@
                                 <a class="" href="{{route('front.blogdetails',['id' => $blog->id,'slug' => $blog->slug])}}">
 
                                 </a>
-                                <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy p-2" alt="">
+                                <img data-src="{{asset('assets/front/img/blogs/'.$blog->main_image)}}" class="img-fluid lazy p-2" style="border-radius: 30px;"  alt="">
                             </div>
                         </div>
                     @endforeach

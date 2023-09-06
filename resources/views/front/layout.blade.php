@@ -37,7 +37,7 @@
         .back-to-top {
             left: auto;
             right: 30px;
-        }   
+        }
     </style>
     @endif
 </head>
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-    </section><!--====== End Breadcrumbs-section ======-->    
+    </section><!--====== End Breadcrumbs-section ======-->
 
 
 @endif
